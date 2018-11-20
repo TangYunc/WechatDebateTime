@@ -1,13 +1,32 @@
 {
   "pages": [
-    "pages/config/config"
+    "pages/config/config",
+    "pages/index/index"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#336699",
+    "navigationBarTextStyle": "white",
     "navigationBarTitleText": "奶兔还是大白糖好",
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "white",
+    "backgroundColor": "#04477C",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "计时",
+      "selectedIconPath":"assets/img/time-1.png",
+      "iconPath":"assets/img/time.png"
+    },
+    {
+      "pagePath": "pages/config/config",
+      "text": "设置",
+      "selectedIconPath": "assets/img/config-1.png",
+      "iconPath": "assets/img/config.png"
+    }]
   }
 }
