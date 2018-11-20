@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/config/config",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/config/config"
+    
   ],
   "window": {
     "navigationBarBackgroundColor": "#336699",

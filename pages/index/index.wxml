@@ -1,2 +1,49 @@
 <!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<view class="title" bindtap="actionSheetTap">
+  <text class="pull-left">{{"<<"}}</text> {{title}}
+  <text class="pull-right">>></text>
+</view>
+
+<view class="time">
+  <view class="big-circle blue first">
+
+  </view>
+  <view animation="{{leftAnimationData}}" class="big-circle blue1 right first">
+
+  </view>
+  <view class="circle white first">
+    <view>{{leftTime}}s</view>
+  </view>
+
+  <view class="big-circle blue second">
+
+  </view>
+  <view animation="{{rightAnimationData}}" class="big-circle blue1 right second">
+
+  </view>
+  <view class="circle white second">
+    <view>{{rightTime}}s</view>
+  </view>
+
+
+</view>
+<view class="btnGroup">
+  <button class="btn" bindtap="leftStart">正方发言</button>
+  <button class="btn" bindtap="rightStart">反方发言</button>
+</view>
+
+<view class="desc">
+  <text>{{desc}}</text>
+
+</view>
+
+<!-- 循环播放 -->
+<audio src="{{src}}" action="{{action}}" loop></audio>
+
+
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+  <block wx:for="{{actionSheetItems}}">
+    <action-sheet-item class="item" bindtap="bindItemTap" id="{{item.id}}">{{item.name}}</action-sheet-item>
+  </block>
+  <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>
